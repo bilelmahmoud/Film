@@ -1,2 +1,3 @@
 /node_modules
-dbFilm.json
+db-config.json
+.env
