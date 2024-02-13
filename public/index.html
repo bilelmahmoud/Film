@@ -7,6 +7,100 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>page 4 </h1>
+    <section>
+        <h1>API Films</h1>
+        <h2>Documentation</h2>
+        Cette API permet d'afficher, d'ajouter, de modifier et de supprimer des films de la base de données. Les
+        routes sont accessibles à partir de l'url suivante :
+        
+       
+    </section>
+    <section>
+            <h2>Routes pour les films </h2>
+            <h3>Récupérer la liste de tous les films</h3>
+            <p>GET /api/films</p>
+
+            
+           
+            <h4>Paramètres possibles :</h4>
+          
+            <div>
+                <strong>orderBy</strong>
+                <ul>
+                    <li>titre</li>
+                    <li>annee</li>
+                    <li>realisation</li>
+                </ul>
+            </div>
+            <div>
+                <strong>orderDirection</strong>
+                <ul>
+                    <li>asc</li>
+                    <li>desc</li>
+                </ul>
+            </div>
+            <h3>Récupérer un film spécifique</h3>
+            <p>GET /api/films{id}</p>
+           
+            <p>Paramètre requis : id (l'identifiant du film à récupérer).</p>
+
+            <h3>Ajouter un nouveau film</h3>
+            <p>POST /api/films</p>
+           
+                <h3>Modifier un film existant</h3>
+                <p>PUT /api/films/{id}</p>
+                <p>
+                   
+                </p>
+            <h3>Supprimer un film</h3>
+            <p>DELETE /api/films{id}</p>
+            <p>
+                
+            </p>
+            <p>Paramètre requis : id (l'identifiant du film à supprimer).</p>
+            </section>
+            <section>
+                <h2>Routes pour les utilisateurs</h2>
+    
+                <p> POST /api/utilisateurs/inscription</p>
+                <p>
+                   
+                </p>
+                <h4>Paramètres requis : un objet utilisateur dans le corps de la requête.</h4>
+                <code>
+                    const utilisateur = {
+                    <span>
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;courriel: 'test@test.com',
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;mdp: '12345',
+                        <br />
+                    </span>
+                    };
+                </code>
+        
+    
+                <h3>Connexion d'un utilisateur</h3>
+                <p>POST  /api/utilisateurs/connexion</p>
+                <p>
+                  
+                </p>
+                <h4>Paramètres requis : un objet utilisateur dans le corps de la requête.</h4>
+                <code>
+                    const utilisateur = {
+                    <span>
+                        <br />
+                       courriel: 'test@test.com',
+                        <br />
+                       mdp: '12345',
+                        <br />
+                    </span>
+                    };
+                </code>
+             
+                <p>Pour tester: admin@email.com - 12345</p>
+            </section>
+    
+
 </body>
 </html>
