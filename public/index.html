@@ -19,13 +19,15 @@
             <h2>Routes pour les films </h2>
             <h3>Récupérer la liste de tous les films</h3>
             <p>GET /api/films</p>
-
-            
-           
+            <p><a href="https://film-22gk.onrender.com/api/films" target="_blank">https://film-22gk.onrender.com/api/films</a></p>
             <h4>Paramètres possibles :</h4>
+
+            <p><a href="https://film-22gk.onrender.com/api/films?tri=annee&order=asc" target="_blank">https://film-22gk.onrender.com/api/films?tri=annee&order=asc</a></p>
+
+     
           
             <div>
-                <strong>orderBy</strong>
+                <strong>tri</strong>
                 <ul>
                     <li>titre</li>
                     <li>annee</li>
@@ -33,7 +35,7 @@
                 </ul>
             </div>
             <div>
-                <strong>orderDirection</strong>
+                <strong>order</strong>
                 <ul>
                     <li>asc</li>
                     <li>desc</li>
@@ -42,18 +44,44 @@
             <h3>Récupérer un film spécifique</h3>
             <p>GET /api/films{id}</p>
            
-            <p>Paramètre requis : id (l'identifiant du film à récupérer).</p>
+            <p><a href="https://film-22gk.onrender.com/api/films/{id}" target="_blank">https://film-22gk.onrender.com/api/films/{id}</a></p>
+           
+            <p>Exemple : id : kcxYu9VvWM0fo2IuGUuq.</p>
 
             <h3>Ajouter un nouveau film</h3>
             <p>POST /api/films</p>
+            <p><a href="https://film-22gk.onrender.com/api/films" target="_blank">https://film-22gk.onrender.com/api/films</a></p>
+            <h4>Paramètres requis : un objet film dans le corps de la requête.</h4>
+            <code>
+                const film = {
+                <span>
+                    <br />
+                   titre: 'Titre du film',
+                    <br />
+                   description: 'Description du film',
+                    <br />
+                   annee: 2020,
+                    <br />
+                   realisation: 'Nom du réalisateur',
+                    <br />
+                   genre: ['Genre 1', 'Genre 2'],
+                    <br />
+                   titreVignette: 'Titre de la vignette',
+                    <br />
+                </span>
+                };
+            </code>
+
            
                 <h3>Modifier un film existant</h3>
                 <p>PUT /api/films/{id}</p>
+                <p><a href="https://film-22gk.onrender.com/api/films/{id}" target="_blank">https://film-22gk.onrender.com/api/films/{id}</a></p>
                 <p>
                    
                 </p>
             <h3>Supprimer un film</h3>
             <p>DELETE /api/films{id}</p>
+            <p><a href="https://film-22gk.onrender.com/api/films/{id}" target="_blank">https://film-22gk.onrender.com/api/films/{id}</a></p>
             <p>
                 
             </p>
@@ -61,20 +89,23 @@
             </section>
             <section>
                 <h2>Routes pour les utilisateurs</h2>
+
+                <h3>Connexion d'un utilisateur</h3>
     
                 <p> POST /api/utilisateurs/inscription</p>
-                <p>
+                <p><a href="https://film-22gk.onrender.com/utlisateurs/inscription" target="_blank">https://film-22gk.onrender.com/utlisateurs/inscription</a></p>
+                
                    
-                </p>
+                
                 <h4>Paramètres requis : un objet utilisateur dans le corps de la requête.</h4>
                 <code>
                     const utilisateur = {
                     <span>
+                        <br/>
+                       courriel: 'test@test.com',
                         <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;courriel: 'test@test.com',
-                        <br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;mdp: '12345',
-                        <br />
+                        mdp: '12345',
+                        <br/> 
                     </span>
                     };
                 </code>
@@ -82,9 +113,7 @@
     
                 <h3>Connexion d'un utilisateur</h3>
                 <p>POST  /api/utilisateurs/connexion</p>
-                <p>
-                  
-                </p>
+                <p><a href="https://film-22gk.onrender.com/utlisateurs/connexion" target="_blank">https://film-22gk.onrender.com/utlisateurs/connexion</a></p>
                 <h4>Paramètres requis : un objet utilisateur dans le corps de la requête.</h4>
                 <code>
                     const utilisateur = {
@@ -98,7 +127,10 @@
                     };
                 </code>
              
-                <p>Pour tester: admin@email.com - 12345</p>
+                <p>Pour tester: seif@gmail.com - "Seif997$</p>
+        
+
+
             </section>
     
 

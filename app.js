@@ -34,10 +34,10 @@ server.use(express.json());
 server.get("/api/films",async (req, res)=>{
    
     try{
-     
+        
         const order = req.query["order"] || "asc"; 
-        const tri = req.query["tri"] || "annee" ; 
-          
+        const tri = req.query["tri"] || "annee" ;
+                  
         const donneesRef = await db.collection("film").orderBy(tri, order).get();
     
         const donneesFinale = [];
@@ -191,7 +191,7 @@ server.post("/utlisateurs/connexion",async(req,res)=>{
     
     delete utilisateurAValider.mdp
     res.statusCode = 200;
-    res.json(utilisateurAValider);
+    res.json({message : "connexion réussi" , utilisateur : utilisateurAValider });
  
 });
 
@@ -240,7 +240,6 @@ check('description').escape().trim().notEmpty(),
 check('annee').escape().trim().notEmpty().isInt(),
 check('realisation').escape().trim().notEmpty(),
 check('titreVignette').escape().trim().notEmpty(),
-check('commentaires').escape().trim().isArray(),
 ],async (req,res)=>{
 
 
