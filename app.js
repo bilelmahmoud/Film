@@ -7,6 +7,7 @@ const mustacheExpress = require("mustache-express");
 const {check, validationResult} = require('express-validator');
 const db = require("./config/db.js");
 const { ServerResponse } = require("http");
+const cors = require("cors");
 
 //Configuration
 dotenv.config();
@@ -21,8 +22,8 @@ server.engine("mustache", mustacheExpress());
 
 //Point d'accès 
 server.use(express.static(path.join(__dirname, "public"))); 
-
 server.use(express.json());
+server.use(cors())
 
 /**
  * @method get
