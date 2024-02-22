@@ -44,7 +44,9 @@ server.get("/api/films",async (req, res)=>{
         const donneesFinale = [];
     
         donneesRef.forEach((doc)=>{
-            donneesFinale.push(doc.data());
+            const filmsAjouter = doc.data();
+            filmsAjouter.id = doc.id
+            donneesFinale.push(filmsAjouter)
             
         
         });
